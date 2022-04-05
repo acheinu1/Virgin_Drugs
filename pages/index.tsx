@@ -1,6 +1,8 @@
 import axios from "axios";
 import Image from "next/image";
 import React from "react";
+import { FaInstagram, FaWhatsapp, FaFacebook, FaMapMarker } from "react-icons/fa";
+
 
 
 //import { Container, Header, Main, Footer, Cards } from "@components";
@@ -23,16 +25,16 @@ function Home({posts}) {
             <h1 className="font-heading leading-tight text-[35px] md:text-[65px] text-green-500 font-bold">
               We Practice <br /> Natural Health
             </h1>
-            <p className="font-heading text-xl md:text-3xl font-bold mt-4">
+            <p className="font-heading text-xl md:text-3xl font-bold mt-4 text-brown-500">
               Food Against Diseases !
             </p>
 
-            <div className="rounded-md shadow mt-24 w-[260px]">
+            <div className="rounded-md shadow mt-20 w-[200px]">
               <a
                 href="#"
-                className="w-full flex items-start justify-center px-8 py-3 border border-transparent text-base font-medium  text-white bg-green-500 md:py-4 md:text-lg md:px-10"
+                className="w-full flex items-start justify-center px-8 py-5 border border-transparent text-base font-medium  text-white-500 bg-green-500 md:py-3 md:text-lg md:px-5"
               >
-                CHAT WITH US 
+                CONTACT US 
               </a>
             </div>
           </div>
@@ -173,31 +175,65 @@ function Home({posts}) {
         </div>
       </section>
       {/* ========================================Subscription form============================== */}
-      <section className="h-[50vh]  md:h-[120vh] bg-black" > 
+      <section className="h-[55vh]  md:h-[110vh] bg-brown-500" > 
        
-      <div className="relative h-[100%] overflow-hidden  flex justify-center">
-            <div className="absolute flex flex-col w-full z-10 top-16 left-24">
-                      
+      <div className=" md:relative overflow-x-hidden flex justify-center ">
+            <div className="md:absolute flex md:flex-col w-full top-16 flex-row justify-center mx-auto">
+                <h1 className="font-heading md:p-12 text-[30px] md:-m-9 md:text-[50px] mt-14 font-bold px-[20%] text-white-500 text-center mx-auto">Get Updated</h1>     
             </div>
             {/* =================================inner box====================================== */}
-            <div className=" absolute bg-brown-500 w-[85%] p-14 my-4 md:my-24 justify-center h-[40vh] md:h-[60vh] item-center z-40">
-                      <div className="bg-brown-400 w-[100%] md:h-[45vh] h-[30vh]">
+            <div className=" bg:transparent absolute md:bg-brown-500 w-[100%] md:w-[85%] p-6 md:p-14 my-4 md:my-48 justify-center h-[30vh] md:h-[50vh] item-center z-40">
+                      <div className=" bg:transparent md:bg-brown-400 w-[100%] md:w-[100%] md:h-[35vh] h-[50vh]">
                         {/* ===================================================================== */}
-                          <form className=" flex justify-center items-center  h-[100%]">
-                              <div className="flex -mx-3 mb-6 flex-row outline-none">
-                                  <input className=" w-[55vw] indent-14 bg-transparent text-white-400 border border-white-500 py-6  leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="PLEASE ENTER YOUR EMAIL ADDRESS"/>
-                                  <button className="flex-shrink-0 outline-none focus:ring border-transparent  bg-green-500  text-sm border-4 text-white py-1 px-8  ml-3 text-white-500" type="button">SUBSCRIBE</button>
+                          <form className=" flex justify-center items-center h-[100%]">
+                              <div className="flex md:-mx-3 mb-6 outline-none flex-col md:flex-row mx-0">
+                                  <input className="w-[80vw] md:w-[55vw] indent-14 bg-transparent text-white-400 border text-[15px] border-white-500 py-6 leading-tight focus:outline-none focus:bg-white  mb-4 md:mb-0" id="grid-first-name" type="text" placeholder="PLEASE ENTER YOUR EMAIL ADDRESS"/>
+                                  <button className="flex-shrink-0 outline-none focus:ring border-transparent  bg-green-500  text-sm border-4 text-white md:py-1 md:px-8 py-4 md:ml-3 text-white-500" type="button">SUBSCRIBE</button>
                               </div>
                           </form>
 
                           {/* <div className="mt-3"><p>Get inspired by these stories</p></div> */}
                     </div>        
             </div>
-            <div className="transparent mt-5 md:mt-72 z-20">
+            <div className="transparent mt-5 md:mt-72 absolute md:relative z-20">
                 <Image src="/leafbg.svg" className="invisible md:visible" alt="quotes" width={5262.7} height={1662.16} />
             </div>  
         </div>
 
+      </section>
+    {/* ========================================Footer section=========================== */}
+      <section className="bg-brown-500 text-center">
+            <div >
+              {/* ========================== top section============================ */}
+              <div className="flex justify-between md:mx-[8%] flex-col  md:flex-row items-center mx-[14%]" >
+                  <div className="">
+                        {/* <h1>Logo Here</h1> */}
+                        <Image src="/white_logo.svg" width="200px" height="86px" />
+                  </div>
+                  <div className="font-heading text-[14px] md:text-[18px] md:py-5 md:w-[45%] w-[90%] py-5 text-white-500">
+                        <p className="md:text-right">Our Mission is to provide to the world affordable, accessible 
+                          and simple nutrient based cures for all diseases
+                        </p>
+                  </div>
+              </div>
+              {/* ========================== bottom section============================ */}
+              <div className="flex justify-between mx-[8%] py-[5%] flex-col md:flex-row items-center " >
+                  <div className="flex w-[90%] flex-col md:flex-row text-[14px] items-center text-white-500 md:w-[35%]">
+                        <p className="flex text-green-400  text-[25px] px-4"><FaMapMarker/></p>
+                        <p className="text-white-400 opacity-60 font-heading  md:text-left  mb-12 md:mb-0">Suite B3, Fortress Plaza, Sharp Corner U-turn, Mararaba, Nasarawa State, Nigeria</p>
+                  </div>
+                  <div className="flex font-heading text-[18px] mr-2 text-white-500 flex-col md:flex-row items-center mb-12 md:mb-0">
+                        <p className="flex text-black  text-[30px]">
+                         <a href="https://www.nairaland.com/" target="_blank"><FaWhatsapp className="bg-green-400 mx-2 rounded-md p-1"/> </a>
+                         <a href="https://www.nairaland.com/" target="_blank"><FaInstagram className="bg-green-400 mx-2 rounded-md p-1"/> </a>
+                         <a href="https://www.nairaland.com/" target="_blank"><FaFacebook className="bg-green-400 mx-2 rounded-md p-1"/> </a>
+                        </p>
+                        <p className="text-white-400 opacity-60">
+                        @virgindrugs_ltd
+                        </p>
+                  </div>
+              </div>
+            </div>
       </section>
     </>
   );

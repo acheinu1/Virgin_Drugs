@@ -9,6 +9,7 @@ import { Hydrate } from "react-query/hydration";
 import { RecoilRoot } from "recoil";
 import "tailwindcss/tailwind.css";
 
+
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   const apolloClient = initializeApollo();
   const queryClient = new QueryClient();
