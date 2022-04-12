@@ -241,7 +241,8 @@ function Home({posts}) {
 export default Home;
 
 export async function getStaticProps(){
-  const postsRes = await axios.get("http://localhost:1337/api/blogposts");
+  
+  const postsRes = await axios.get("https://virgindrugs.herokuapp.com/api/blogposts");
   console.log('from server ', postsRes);
   return{
     props: {
