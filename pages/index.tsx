@@ -20,7 +20,7 @@ function Home({posts}) {
         <div className="mx-24 items-center justify-between flex min-h-[75vh] flex-col md:flex-row relative space-x-8">
           <div className="flex flex-col justify-center">
             <div className="flex ml-[160px] items-start  -mt-10" >
-              <Image src="/leaf.svg" height="90px" width="90px" />
+              <Image src="/leaf.svg" className="invisible md:visible" alt="quotes" width={90} height={90} />
             </div>
             <h1 className="font-heading leading-tight text-[35px] md:text-[65px] text-green-500 font-bold">
               We Practice <br /> Natural Health
@@ -102,7 +102,7 @@ function Home({posts}) {
                        <div className="bg-brown-400  w-[80%] md:w-[70%] p-8 md:p-14 my-12">
                           <div className="flex">
                             <Image src="/testimonial.png" height="40px" width="40px" /> 
-                            <h1 className="font-heading  text-white-500 text-[20px] ml-8 font-bold">JOHN DOE</h1>
+                            <h1 className="font-heading  text-white-500 text-[20px] ml-8 font-bold">Anonymous</h1>
                           </div>
                           <h3 className="font-heading text-[13px] md:text-[16px] text-green-400 text pr-0 md:pr-16 my-4 md:my-4 font-black">
                           Two Year History of Persistent Pains in the Lungs and Difficulty Breathing
@@ -123,7 +123,7 @@ function Home({posts}) {
                        <div className="bg-brown-400  w-[80%] md:w-[70%] p-8 md:p-14 my-12">
                           <div className="flex">
                             <Image src="/testimonial.png" height="40px" width="40px" /> 
-                            <h1 className="font-heading  text-white-500 text-[20px] ml-8 font-bold">JOHN DOE</h1>
+                            <h1 className="font-heading  text-white-500 text-[20px] ml-8 font-bold">Anonymous</h1>
                           </div>
                           <h3 className="font-heading text-[13px] md:text-[16px] text-green-400 text pr-0 md:pr-16 my-4 md:my-4 font-black">
                           Two Year History of Persistent Pains in the Lungs and Difficulty Breathing

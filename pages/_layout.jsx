@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
 
   // =================button toggle =================
   <button
-    className=' inline-flex p-3 hover:bg-green-600 rounded lg:hidden text-white ml-auto hover:text-white outline-none'
+    className=' inline-flex hover:bg-green-600 rounded lg:hidden text-white ml-auto hover:text-white outline-none'
     onClick={handleClick}
   >
     <svg
@@ -32,17 +32,17 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <nav className="flex items-center flex-wrap px-20 py-4 bg-green-500 md:bg-transparent ">
+      <nav className="flex items-center flex-wrap px-10 md:px-20 py-4 bg-green-500 md:bg-transparent ">
         <Link href="/">
           <a className="inline-flex items-center  mr-4 ">
           <div className=" md:w-[200px] md:h-[46px]">
             {/* <h1>Logo Here</h1> */}
-            <Image src="/logo.svg" width="200px" height="46px" />
+            <Image src="/logo.svg" width="170px" height="46px" />
           </div>
           </a>
         </Link>
         <button
-          className=" inline-flex p-3  rounded lg:hidden text-white ml-auto hover:text-white outline-none"
+          className=" inline-flex   rounded lg:hidden text-white ml-auto hover:text-white outline-none"
           onClick={handleClick}
         >
           <svg
@@ -66,7 +66,7 @@ const Layout = ({ children }) => {
             active ? "" : "hidden"
           }   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
         >
-          <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto">
+          <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto justify-items-end md:px-0 px-6  md:py-0 py-4 ">
             <Link href="/">
               <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-white ">
                 Home
@@ -83,8 +83,8 @@ const Layout = ({ children }) => {
               </a>
             </Link>
             <Link href="/contact">
-              <a className="lg:inline-flex lg:w-auto w-full px-5 py-4 text-white font-bold items-center justify-center hover:bg-brown-500 hover:text-white-500">
-                Contact
+              <a className="lg:inline-flex lg:w-auto w-full px-5 py-4 text-white font-bold items-center justify-center bg-brown-500 hover:bg-brown-400 text-white-500">
+                CONTACT
               </a>
             </Link>
           </div>
