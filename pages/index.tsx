@@ -154,10 +154,10 @@ function Home({posts}) {
               {posts?.map((post)=>{
                    return <div className="p-4 sm:w-1/4 lg:w-1/4" key={post.id}>
                    <div className="w-[250px] h-[350px] bg-brown-400 mb-14 ">
-                     <div className="p-4"> <Image src="https://i.postimg.cc/VNTTqXNp/Blog-1.png" height="220px" width="290px"/> </div>
+                     <div className="p-4"> <Image src={post?.attributes?.BlogThumbnail?.data?.attributes?.url??''} height="220px" width="290px"/> </div>
                      <div className="px-4 w-[250px]"> 
                        <h1 className="font-heading text-[16px] font-bold text-white-500 hover:text-white-600 active:bg-violet-700 mb-4"> <a href="#" >{post.attributes.Title}</a></h1>
-                       <p className="text-green-400 text-[12px]"> By: Pharm Chris Orazulike</p>
+                       <p className="text-green-400 text-[12px]">{post.attributes.Author}</p>
                      </div>
                    </div>      
                </div> 
@@ -242,7 +242,7 @@ export default Home;
 
 export async function getStaticProps(){
   
-  const postsRes = await axios.get("https://virgindrugs.herokuapp.com/api/blogposts");
+  const postsRes = await axios.get("https://virgindrugs.herokuapp.com/api/blogposts?populate=*");
   console.log('from server ', postsRes);
   return{
     props: {
