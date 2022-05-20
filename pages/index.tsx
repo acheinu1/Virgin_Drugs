@@ -12,7 +12,7 @@ import { GrClose } from "react-icons/gr";
 function Home({ posts }) {
  // console.log("someting nice ", posts[0])
   const [loading, setLoading] = React.useState(false);
-  const [showEmailAlert, setShowEmailAlert] = React.useState(true);
+  const [showEmailAlert, setShowEmailAlert] = React.useState(false);
   const [email, setEmail] = React.useState("");
 
   const submitEmail = async (event) => {
