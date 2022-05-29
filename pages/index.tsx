@@ -9,8 +9,8 @@ import { GrClose } from "react-icons/gr";
 
 //import { Container, Header, Main, Footer, Cards } from "@components";
 
-function Home({ posts }) {
- // console.log("someting nice ", posts[0])
+function Home({ posts, guidePosts }) {
+//  console.log("someting nice ", guidePosts[1])
   const [loading, setLoading] = React.useState(false);
   const [showEmailAlert, setShowEmailAlert] = React.useState(false);
   const [email, setEmail] = React.useState("");
@@ -115,10 +115,10 @@ function Home({ posts }) {
         </div>
       </section>
       {/* =======================================testimonial Section */}
-      {/* <section className="bg-brown-500">
-      
-      </section> */}
+      <section className="bg-brown-500">
       <Testimonial posts={posts} />
+      </section>
+      {/* <Testimonial posts={posts} /> */}
 
       {/* ===================================================Blog Section===== */}
       <section className="bg-brown-500 overflow-hidden" >
@@ -148,7 +148,9 @@ function Home({ posts }) {
         <div className="flex item-center h-[auto] bg-brown-400">
           <div className="flex bg-brown-500  w-[85%] mx-auto items-center justify-center my-[5%] flex-col">
             <h1 className="font-heading text-bold text-white-500 text-[30px] md:text-[50px] font-bold px-[10%] md:px-[20%] text-center p-6">Guidelines For Good Health</h1>
-            <div className="h-[40vh] bg-black"> </div>
+            <div className="h-[40vh] bg-black"> 
+               
+            </div>
           </div>
         </div>
       </section>
@@ -180,18 +182,15 @@ Email subscription successful!
 
 <button type="button" onClick={()=>setShowEmailAlert(false)}><GrClose className=""/> </button>
 </div>)}
-                </div>
-                
-              </form>
-              
-
+</div>
+</form>
               {/* <div className="mt-3"><p>Get inspired by these stories</p></div> */}
-            </div>
-          </div>
+</div>
+</div>
           <div className="transparent mt-5 md:mt-72 absolute md:relative z-20">
             <Image src="/leafbg.svg" className="invisible md:visible" alt="quotes" width={5262.7} height={1662.16} />
           </div>
-        </div>
+       </div>
 
       </section>
       {/* ========================================Footer section=========================== */}
@@ -243,3 +242,4 @@ export async function getStaticProps() {
     },
   }
 };
+

@@ -59,16 +59,14 @@ export default function Testimonial(props) {
   }, [embla, setScrollSnaps, onSelect]);
 
   return (
-    <div className="py-12 mx-auto max-w-6xl px-5">
+    <div className="py-12 mx-auto max-w-6xl px-5 ">
       {/* title */}
-      <div className="flex justify-center items-center mb-12">
-        <h2 className="text-center text-black dark:text-gray-100 text-4xl font-bold">
-          Trending
-        </h2>
-      </div>
-      <div className="overflow-hidden" ref={emblaRef}>
+     
+        <div><h1 className=" font-heading text-[30px] font-bold text-white-500  md:text-[50px]  px-[8%] py-[10%] pt-[20%] md:py-[6%] md:px-[10%]  text-center">Testimonies</h1></div>
       
-        <div className="flex">
+      <div className="overflow-hidden bg-brown-400" ref={emblaRef}>
+      
+        <div className="flex ">
        
           {props.posts.map((post) => (
             <div
@@ -76,6 +74,7 @@ export default function Testimonial(props) {
               key={post.attributes.Title}
             >
               <div className="overflow-hidden cursor-pointer lg:w-1/4">
+                
                 <Link href={`/blog/${post.slug}`}>
                   <a>
                     <Image
@@ -95,9 +94,13 @@ export default function Testimonial(props) {
                 {/* tags and date */}
                 <div className="flex text-sm mt-4 space-x-5 lg:mx-20">
                   <p className="font-bold dark:text-white">{post.tags}</p>
-                  <p className="font-normal text-gray-500 dark:text-gray-400">
+                  <p className="font-normal text-white-600 ">
                     {/* {format(parseISO(post.publishedAt), "MMMM dd, yyyy")} */}
-                    Quis nulla excepteur quis enim elit do irure ea irure ad officia id sit. Aute tempor enim culpa eiusmod aliqua deserunt. Nostrud dolor ea ullamco do esse reprehenderit laboris magna culpa aliqua sit nostrud do sit. Excepteur pariatur laborum nulla do dolore veniam. Minim ad nisi qui magna minim culpa aute ea ut fugiat ad velit laboris aute.
+                    In 2015, I proposed that ALL diseases could be cured using the right proportions of food nutrients (Journal of Global Biosciences ISSN 2320-1355, Vol.9, No. 4, 2020). The research which began in 2012 was presented in 2018 at  the WANNPRES international Conference.
+                    We therefore present this case of a 32 year old Anambra State indigene resident in Mararaba Nasarawa State, Nigeria. In 2020, he developed persistent pains in the lungs and difficulty breathing (suspected pneumonia).
+                    In October 2021, he used our patented FUDELT METHOD ( NG/P/2016/450), which is a customized nutrient support service, for one month.Presently, the pains in the lungs have stopped and he breathes normally. We thank God.
+                    FUDELT METHOD... Food against diseases!
+
                   </p>
                 </div>
                 {/* title */}
@@ -124,8 +127,8 @@ export default function Testimonial(props) {
                     />
                   </div> */}
                   <div className="flex flex-col mx-4 space-y-1">
-                    <strong className="text-sm dark:text-gray-100">
-                      princess acheinue
+                    <strong className="text-sm text-white-default">
+                      Princess acheinue
                       {/* {post.author} */}
                     </strong>
                     <p className="text-xs text-gray-500 dark:text-gray-400">
