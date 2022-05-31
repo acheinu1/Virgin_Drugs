@@ -1,4 +1,5 @@
 import Testimonial from "@components/Testimonial";
+import { faCertificate } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import Image from "next/image";
 import React from "react";
@@ -9,8 +10,8 @@ import { GrClose } from "react-icons/gr";
 
 //import { Container, Header, Main, Footer, Cards } from "@components";
 
-function Home({ posts, guidePosts }) {
-//  console.log("someting nice ", guidePosts[1])
+function Home({ posts, testimonials  }) {
+ console.log("someting nice ", testimonials)
   const [loading, setLoading] = React.useState(false);
   const [showEmailAlert, setShowEmailAlert] = React.useState(false);
   const [email, setEmail] = React.useState("");
@@ -118,6 +119,17 @@ function Home({ posts, guidePosts }) {
       <section className="bg-brown-500">
       <Testimonial posts={posts} />
       </section>
+        {/* ========================================Fudelt Updates section=========================== */}
+        <section>
+        <div className="flex item-center h-[auto] bg-brown-400">
+          <div className="flex bg-brown-500  w-[85%] mx-auto items-center justify-center my-[5%] flex-col">
+            <h1 className="font-heading text-bold text-white-500 text-[30px] md:text-[50px] font-bold px-[10%] md:px-[20%] text-center p-6">Guidelines For Good Health</h1>
+            <div className="h-[40vh] bg-black"> 
+               
+            </div>
+          </div>
+        </div>
+      </section>
       {/* <Testimonial posts={posts} /> */}
 
       {/* ===================================================Blog Section===== */}
@@ -143,23 +155,13 @@ function Home({ posts, guidePosts }) {
           </div>
         </div>
       </section>
-      {/* ========================================Fudelt Updates section=========================== */}
-      <section>
-        <div className="flex item-center h-[auto] bg-brown-400">
-          <div className="flex bg-brown-500  w-[85%] mx-auto items-center justify-center my-[5%] flex-col">
-            <h1 className="font-heading text-bold text-white-500 text-[30px] md:text-[50px] font-bold px-[10%] md:px-[20%] text-center p-6">Guidelines For Good Health</h1>
-            <div className="h-[40vh] bg-black"> 
-               
-            </div>
-          </div>
-        </div>
-      </section>
+    
       {/* ========================================Subscription form============================== */}
       <section className="h-[55vh]  md:h-[110vh] bg-brown-500" >
 
         <div className=" md:relative overflow-x-hidden flex justify-center ">
           <div className="md:absolute flex md:flex-col w-full top-16 flex-row justify-center mx-auto">
-            <h1 className="font-heading md:p-12 text-[30px] md:-m-9 md:text-[50px] mt-14 font-bold px-[20%] text-white-500 text-center mx-auto">Get Updated</h1>
+            <h1 className="font-heading md:p-12 text-[30px] md:-m-9 md:text-[50px] mt-14 font-bold px-[20%] text-white-500 text-center mx-auto">Subscribe to our newsletter</h1>
           </div>
           {/* =================================inner box====================================== */}
           <div className=" bg:transparent absolute md:bg-brown-500 w-[100%] md:w-[85%] p-6 md:p-14 my-4 md:my-48 justify-center h-[30vh] md:h-[50vh] item-center z-40">
@@ -242,4 +244,19 @@ export async function getStaticProps() {
     },
   }
 };
+
+
+// export async function getStaticData() {
+
+//   const postsRes = await axios.get("http://localhost:1337/api/testimonials");
+//   console.log('from server ', postsRes);
+//   return {
+//     props: {
+//       testimonials: postsRes.data.data.data
+//     },
+//   }
+// };
+
+
+
 

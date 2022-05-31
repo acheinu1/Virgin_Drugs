@@ -66,79 +66,77 @@ export default function Testimonial(props) {
       
       <div className="overflow-hidden bg-brown-400" ref={emblaRef}>
       
-        <div className="flex ">
+        <div className="flex w-[400%] items-center ">
        
-          {props.posts.map((post) => (
-            <div
-              className="relative flex flex-none flex-wrap lg:flex-nowrap w-full mx-10"
-              key={post.attributes.Title}
-            >
-              <div className="overflow-hidden cursor-pointer lg:w-1/4">
-                
-                <Link href={`/blog/${post.slug}`}>
-                  <a>
-                    <Image
-                     src={post?.attributes?.BlogThumbnail?.data?.attributes?.url??''}
-                      height={514}
-                      width={800}
-                      className="rounded-lg"
-                      alt="cover image"
-                     // placeholder="blur"
-                     // blurDataURL={post.image_cover}
-                    />
-                  </a>
-                </Link>
-              </div>
-              {/* content */}
-              <div className="flex flex-col space-y-4 lg:w-4/5 lg:space-x-20 lg:justify-center">
-                {/* tags and date */}
-                <div className="flex text-sm mt-4 space-x-5 lg:mx-20">
-                  <p className="font-bold dark:text-white">{post.tags}</p>
-                  <p className="font-normal text-white-600 ">
-                    {/* {format(parseISO(post.publishedAt), "MMMM dd, yyyy")} */}
-                    In 2015, I proposed that ALL diseases could be cured using the right proportions of food nutrients (Journal of Global Biosciences ISSN 2320-1355, Vol.9, No. 4, 2020). The research which began in 2012 was presented in 2018 at  the WANNPRES international Conference.
-                    We therefore present this case of a 32 year old Anambra State indigene resident in Mararaba Nasarawa State, Nigeria. In 2020, he developed persistent pains in the lungs and difficulty breathing (suspected pneumonia).
-                    In October 2021, he used our patented FUDELT METHOD ( NG/P/2016/450), which is a customized nutrient support service, for one month.Presently, the pains in the lungs have stopped and he breathes normally. We thank God.
-                    FUDELT METHOD... Food against diseases!
-
-                  </p>
-                </div>
-                {/* title */}
-                <Link href={`/blog/${post.slug}`}>
-                  <a className="cursor-pointer">
-                    <h2 className="text-3xl lg:text-4xl font-bold dark:text-gray-100">
-                      {post.title}
-                    </h2>
-                  </a>
-                </Link>
-                <Link href={`/blog/${post.slug}`}>
-                  <a className="cursor-pointer">
-                    <p className="text-gray-500 text-justify">{post.summary}</p>
-                  </a>
-                </Link>
-                <div className="flex items-center">
-                  {/* <div className="h-12 w-12">
-                    <Image
-                      src="/img/avatar-banner-360x360.png"
-                      height="260"
-                      width="260"
-                      alt="avatar image"
-                      className="rounded-full"
-                    />
-                  </div> */}
-                  <div className="flex flex-col mx-4 space-y-1">
-                    <strong className="text-sm text-white-default">
-                      Princess acheinue
-                      {/* {post.author} */}
-                    </strong>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">
-                      {post.designation}
-                    </p>
+              {/* Slide 1_____________________________________________________________________ */}
+              <div className="embla__slide w-[100%] flex 0 0 100% items-center ">
+                  <div className="flex  m-4">
+                        <div><Image src="/1.svg" height={1600} width={2000} /></div>
+                        <div className="mx-12">
+                            <h3 className="font-heading leading-tight text-[10px] md:text-[20px] text-white-default">TWO YEAR HISTORY OF PERSISTENT PAINS IN THE LUNGS AND <br/>DIFFICULTY BREATHING</h3>
+                            <p className="text-[8px] md:text-[14px] text-white-400 mt-4 opacity-80">
+                            In 2015, I proposed that ALL diseases could be cured using the right proportions of food nutrients (Journal of Global Biosciences ISSN 2320-1355, Vol.9, No. 4, 2020). The research which began in 2012 was presented in 2018 at  the WANNPRES international conference.
+                            We therefore present this case of a 32 year old Anambra State indigene resident in Mararaba Nasarawa State, Nigeria. In 2020, he developed persistent pains in the lungs and difficulty breathing (suspected pneumonia).
+                            In October 2021, he used our patented FUDELT METHOD ( NG/P/2016/450), which is a customized nutrient support service, for one month.
+                            Presently, the pains in the lungs have stopped and he breathes normally. We thank God.
+                            <br/>
+                            <p className="mt-3 italic">FUDELT METHOD... Food against diseases!</p>
+                            </p>
+                        </div>
                   </div>
-                </div>
               </div>
-            </div>
-          ))}
+              {/* Slide 2_____________________________________________________________________ */}
+              <div className="embla__slide w-[100%] flex 0 0 100% ">
+              <div className="flex m-4 items-center">
+                        <div><Image src="/2.svg" height={1600} width={2000} /></div>
+                        <div className="mx-16">
+                            <h3 className="font-heading leading-tight text-[10px] md:text-[20px] text-white-default">ABOLISHED! SEVEN YEARS OF PUS-PRODUCING DIABETIC GANGRENE AND CHRONIC DIARRHEA</h3>
+                            <p className="text-[8px] md:text-[14px] text-white-400 mt-4 opacity-80">
+                            In 2015, I proposed that ALL diseases could be cured using the right proportions of food nutrients (Journal of Global Biosciences ISSN 2320-1355, Vol.9, No. 4, 2020). The research which began in 2012 was presented in 2018 at  the WANNPRES international conference.
+                            We hereby present the case of a middle aged obese man resident in Jabi FCT, Nigeria. In 2014 he underwent surgery to remove gangrenous (rotten) tissues inside his buttocks near the anus. Soon afterwards, the gangrene reappeared in another part of his buttocks and was exuding pus. He also developed chronic diarrhea. Fasting blood sugar test showed prediabetes. 
+                            In May 2021, he used our patented FUDELT METHOD ( NG/P/2016/450), which is a customized nutrient support service, for six weeks.
+                            Thereafter and up till now, the gangrenous buttocks has healed up and the diarrhea has stopped. We thank God
+                            <br/>
+                            <p className="mt-3 italic">FUDELT METHOD... Food against diseases!</p>
+                            </p>
+                        </div>
+                  </div>
+              </div>
+              {/* Slide 3_____________________________________________________________________ */}
+              <div className="embla__slide w-[100%] flex 0 0 100%">
+              <div className="flex  m-4">
+                        <div><Image src="/3.svg" height={1600} width={2000} /></div>
+                        <div className="mx-12">
+                            <h3 className="font-heading leading-tight text-[10px] md:text-[20px] text-white-default">DEMOLISHED! STAPHYLOCOCCUS AUREUS INFECTION</h3>
+                            <p className="text-[8px] md:text-[14px] text-white-400 mt-4 opacity-80">
+                             In 2015, I proposed that ALL diseases could be cured using the right proportions of food nutrients (Journal of Global Biosciences ISSN 2320-1355, Vol.9, No. 4, 2020). The research which began in 2012 was presented in 2018 at  the WANNPRES international conference.
+                             We hereby present this case for a Nasarawa state businessman. On October 25, 2021, urine MCS showed significant growth of Staphylococcus aureus with resistance to many antibiotics. The man had slight fever.
+                             He used our patented FUDELT METHOD ( NG/P/2016/450), which is a customized nutrient support service, for three weeks.
+                             Thereafter, repeat MCS showed no growth of Staphylococcus aureus and the fever was gone. All laboratory results are with us. We thank God.
+                            <br/>
+                            <p className="mt-3 italic">FUDELT METHOD... Food against diseases!</p>
+                            </p>
+                        </div>
+                  </div>
+              </div>
+              {/* Slide 4_____________________________________________________________________ */}
+              <div className="embla__slide w-[100%]">
+              <div className="flex  m-4">
+                        <div><Image src="/4.svg" height={1600} width={2000} /></div>
+                        <div className="mx-12">
+                            <h3 className="font-heading leading-tight text-[10px] md:text-[20px] text-white-default">GOODBYE,  CHRONIC  ARTHRITIS!</h3>
+                            <p className="text-[8px] md:text-[14px] text-white-400 mt-4 opacity-80">
+                            In 2015, I proposed that ALL diseases could be cured using the right proportions of food nutrients (Journal of Global Biosciences ISSN 2320-1355, Vol.9, No. 4, 2020). The research which began in 2012 was presented in 2018 at  the WANNPRES international conference.
+                            We therefore present this case for a  middle aged woman who worships at St Joseph's Catholic Church,  Jabi Dakibiu, Abuja. For two years,  she suffered severe bone and joint pains which sometimes  caused her sleepless nights.  Walking  and kneeling  was difficult for her.
+                            In February  2021, she started  using our patented FUDELT METHOD ( NG/P/2016/450), which is a customized nutrient support service. By August 2021, all symptoms  of chronic  arthritis were gone. She now walks about  very actively  and kneels freely  in church. We thank God.
+                            <br/>
+                            <p className="mt-3 italic">FUDELT METHOD... Food against diseases!</p>
+                            </p>
+                        </div>
+                  </div>
+              </div>
+            
+
         </div>
         </div>
         <div className="flex items-center justify-center mt-5 space-x-2">
