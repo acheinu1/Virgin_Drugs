@@ -10,8 +10,9 @@ import { GrClose } from "react-icons/gr";
 
 //import { Container, Header, Main, Footer, Cards } from "@components";
 
-function Home({ posts, testimonials  }) {
- console.log("someting nice ", testimonials)
+function Home({ posts, Guidelines  }) {
+ console.log("someting nice ", Guidelines)
+ console.log("nice ", posts)
   const [loading, setLoading] = React.useState(false);
   const [showEmailAlert, setShowEmailAlert] = React.useState(false);
   const [email, setEmail] = React.useState("");
@@ -121,11 +122,13 @@ function Home({ posts, testimonials  }) {
       </section>
         {/* ========================================Fudelt Updates section=========================== */}
         <section>
-        <div className="flex item-center h-[auto] bg-brown-400">
-          <div className="flex bg-brown-500  w-[85%] mx-auto items-center justify-center my-[5%] flex-col">
+        <div className="flex item-center h-[auto] bg-brown-500">
+          <div className="flex bg-brown-400  w-[85%] mx-auto items-center justify-center my-[5%] flex-col">
             <h1 className="font-heading text-bold text-white-500 text-[30px] md:text-[50px] font-bold px-[10%] md:px-[20%] text-center p-6">Guidelines For Good Health</h1>
-            <div className="h-[40vh] bg-black"> 
-               
+            <div className=" bg-white-500 flex flex-col items-center text-center py-6 px-14"> 
+               <h3 className="font-bold text-lg py-2">{Guidelines[0].attributes.Heading}</h3>
+               <p className="text-[18px]">{Guidelines[0].attributes.BodytextGuidelines}</p>
+               <p className="italic font-bold opacity-50 py-2 leading-10">Snippet Date: {Guidelines[0].attributes.snippetDate}</p>
             </div>
           </div>
         </div>
@@ -161,7 +164,7 @@ function Home({ posts, testimonials  }) {
 
         <div className=" md:relative overflow-x-hidden flex justify-center ">
           <div className="md:absolute flex md:flex-col w-full top-16 flex-row justify-center mx-auto">
-            <h1 className="font-heading md:p-12 text-[30px] md:-m-9 md:text-[50px] mt-14 font-bold px-[20%] text-white-500 text-center mx-auto">Subscribe to our newsletter</h1>
+            <h1 className="font-heading pb-8 md:p-12 text-[30px] md:-m-9 md:text-[50px] mt-14 font-bold px-[20%] text-white-500 text-center mx-auto">Subscribe to our newsletter</h1>
           </div>
           {/* =================================inner box====================================== */}
           <div className=" bg:transparent absolute md:bg-brown-500 w-[100%] md:w-[85%] p-6 md:p-14 my-4 md:my-48 justify-center h-[30vh] md:h-[50vh] item-center z-40">
@@ -234,25 +237,27 @@ Email subscription successful!
 };
 export default Home;
 
+// export async function getStaticProps() {
+
+//   const postsRes = await axios.get("https://virgindrugs.herokuapp.com/api/blogposts?populate=*");
+//   console.log('from server ', postsRes);
+//   return {
+//     props: {
+//       posts: postsRes.data.data
+//     },
+//   }
+// };
+
+
 export async function getStaticProps() {
-
-  const postsRes = await axios.get("https://virgindrugs.herokuapp.com/api/blogposts?populate=*");
-  console.log('from server ', postsRes);
-  return {
-    props: {
-      posts: postsRes.data.data
-    },
-  }
-};
-
-
-export async function getStaticData() {
-
+  const blogData =  await axios.get("https://virgindrugs.herokuapp.com/api/blogposts?populate=*");
   const postsRes = await axios.get("http://localhost:1337/api/guidelines-for-good-healths");
   console.log('from server ', postsRes);
+  console.log('from server ', blogData);
   return {
     props: {
-      Guidelines: postsRes.data
+      posts:blogData.data.data,
+      Guidelines: postsRes.data.data
     },
   }
 };
