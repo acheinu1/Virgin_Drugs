@@ -55,7 +55,7 @@ function Home({ posts, testimonials  }) {
 
             <div className="rounded-md shadow mt-20 w-[200px]">
               <a
-                href="/footer"
+                href="/#contact"
                 className="w-full flex items-start justify-center px-8 py-5 border border-transparent text-base font-medium  text-white-500 bg-green-500 md:py-3 md:text-lg md:px-5"
               >
                 CONTACT US
@@ -68,7 +68,7 @@ function Home({ posts, testimonials  }) {
         </div>
       </header>
       {/* =============================WHO WE ARE SECTIONS =============================*/}
-      <section className="bg-brown-500">
+      <section className="bg-brown-500" id="aboutus">
         <div className=" flex justify-between text-center flex-col md:flex-row ">
           {/* =======================left side */}
           <div className="bg-brown-600 w-[100%] md:w-[100%] lg:w-[50%]">
@@ -116,7 +116,7 @@ function Home({ posts, testimonials  }) {
         </div>
       </section>
       {/* =======================================testimonial Section */}
-      <section className="bg-brown-500">
+      <section className="bg-brown-500 ">
       <Testimonial posts={posts} />
       </section>
         {/* ========================================Fudelt Updates section=========================== */}
@@ -196,7 +196,7 @@ Email subscription successful!
 
       </section>
       {/* ========================================Footer section=========================== */}
-      <section className="bg-brown-500 text-center">
+      <section className="bg-brown-500 text-center " id="contact">
         <div >
           {/* ========================== top section============================ */}
           <div className="flex justify-between md:mx-[8%] flex-col  md:flex-row items-center mx-[14%]" >
@@ -246,16 +246,16 @@ export async function getStaticProps() {
 };
 
 
-// export async function getStaticData() {
+export async function getStaticData() {
 
-//   const postsRes = await axios.get("http://localhost:1337/api/testimonials");
-//   console.log('from server ', postsRes);
-//   return {
-//     props: {
-//       testimonials: postsRes.data.data.data
-//     },
-//   }
-// };
+  const postsRes = await axios.get("http://localhost:1337/api/guidelines-for-good-healths");
+  console.log('from server ', postsRes);
+  return {
+    props: {
+      Guidelines: postsRes.data
+    },
+  }
+};
 
 
 

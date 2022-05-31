@@ -72,17 +72,18 @@ const Layout = ({ children }) => {
                 Home
               </a>
             </Link>
-            <Link href="/services">
-              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-white">
-                Services
-              </a>
-            </Link>
-            <Link href="/about">
+            <Link href="/#aboutus">
               <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-white">
                 About us
               </a>
             </Link>
-            <Link href="/contact">
+            <Link href="/#testimonials">
+              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:text-white">
+                Testimonial
+              </a>
+            </Link>
+            
+            <Link href="/#contact">
               <a className="lg:inline-flex lg:w-auto w-full px-5 py-4 text-white font-bold items-center justify-center bg-brown-500 hover:bg-brown-400 text-white-500">
                 CONTACT
               </a>
