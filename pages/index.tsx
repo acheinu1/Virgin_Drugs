@@ -93,7 +93,10 @@ function Home({ posts, Guidelines  }) {
           {/* =======================left===== */}
           <div className=" h-[40vh] md:h-[80vh] flex items-center w-[100%] md:w-[100%] lg:w-[50%] justify-center ">
             <div className="bg-green-500 w-[75%] h-[70%] md:h-[55%] md:w-[70%] ">
-              <div className="bg-white-400 h-[93%] w-[95%]"></div>
+              <div className="bg-white-400 h-[93%] w-[95%] my-auto">
+              <Image src="/fudeltimage.png" className="invisible" width={90} height={60} />
+              <Image src="/fudeltimage.png" className=" pt-[50px]" width={390} height={140} />
+              </div>
             </div>
           </div>
           {/* =======================right==== */}
@@ -160,11 +163,11 @@ function Home({ posts, Guidelines  }) {
       </section>
     
       {/* ========================================Subscription form============================== */}
-      <section className="h-[55vh]  md:h-[110vh] bg-brown-500" >
+      <section className="h-[65vh]  md:h-[110vh] bg-brown-500" >
 
         <div className=" md:relative overflow-x-hidden flex justify-center ">
-          <div className="md:absolute flex md:flex-col w-full top-16 flex-row justify-center mx-auto">
-            <h1 className="font-heading pb-8 md:p-12 text-[30px] md:-m-9 md:text-[50px] mt-14 font-bold px-[20%] text-white-500 text-center mx-auto">Subscribe to our newsletter</h1>
+          <div className="md:absolute flex md:flex-col w-full top-24 flex-row justify-center mx-auto">
+            <h1 className="font-heading pb-8 md:p-12 text-[30px] md:-m-9  mb-10 md:mb-2 md:text-[50px] mt-14 font-bold px-[20%] text-white-500 text-center mx-auto">Subscribe to our newsletter</h1>
           </div>
           {/* =================================inner box====================================== */}
           <div className=" bg:transparent absolute md:bg-brown-500 w-[100%] md:w-[85%] p-6 md:p-14 my-4 md:my-48 justify-center h-[30vh] md:h-[50vh] item-center z-40">
@@ -172,7 +175,7 @@ function Home({ posts, Guidelines  }) {
               {/* ===================================================================== */}
               <form className=" flex justify-center items-center h-[100%]" onSubmit={submitEmail}>
                <div className="flex flex-col mt-2">
-                <div className="flex md:-mx-3 mb-6 outline-none flex-col md:flex-row mx-0">
+                <div className="flex md:-mx-3 mb-6 outline-none mt-32 md:mt-0 flex-col md:flex-row mx-0">
                   <input className="w-[80vw] md:w-[55vw] indent-14 bg-transparent text-white-400 border text-[15px] border-white-500 py-6 leading-tight focus:outline-none focus:bg-white  mb-4 md:mb-0" id="email" name="email" type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="PLEASE ENTER YOUR EMAIL ADDRESS" required />
                   <button className="flex-shrink-0  outline-none align-center justify-center focus:ring border-transparent  bg-green-500  text-sm border-4 text-white md:py-1 md:px-8 py-4 md:ml-3 text-white-500" type="submit">
             
@@ -251,7 +254,7 @@ export default Home;
 
 export async function getStaticProps() {
   const blogData =  await axios.get("https://virgindrugs.herokuapp.com/api/blogposts?populate=*");
-  const postsRes = await axios.get("http://localhost:1337/api/guidelines-for-good-healths");
+  const postsRes = await axios.get("https://virgindrugs.herokuapp.com/api/guidelines-for-good-healths?populate=*");
   console.log('from server ', postsRes);
   console.log('from server ', blogData);
   return {
