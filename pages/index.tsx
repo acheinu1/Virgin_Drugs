@@ -224,7 +224,7 @@ Email subscription successful!
             </div>
             <div className="flex font-heading text-[18px] mr-2 text-white-500 flex-col md:flex-row items-center mb-12 md:mb-0">
               <p className="flex text-black  text-[30px]">
-                <a href="https://www.web.whatsapp.com/" target="_blank"><FaWhatsapp className="bg-green-400 mx-2 rounded-md p-1" /> </a>
+                <a href="https://wa.me/message/2UZISAYYUNXXG1" target="_blank"><FaWhatsapp className="bg-green-400 mx-2 rounded-md p-1" /> </a>
                 <a href="https://www.instagram.com/" target="_blank"><FaInstagram className="bg-green-400 mx-2 rounded-md p-1" /> </a>
                 <a href="https://www.facebook.com/" target="_blank"><FaFacebook className="bg-green-400 mx-2 rounded-md p-1" /> </a>
               </p>
